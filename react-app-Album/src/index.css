@@ -1,0 +1,10 @@
+/* Set the body and HTML to take up the full viewport height */
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}

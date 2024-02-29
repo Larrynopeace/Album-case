@@ -1,0 +1,44 @@
+IDEA: An app where users can share all kinds of plants from PVZ
+(Draw a skeleton with some pages)
+-------------------------------------------------------------------------------------------------------------------------
+Needed Data:
+
+1. Users: {Name, E-mail, Password, Image}
+
+2. Plant: {Title, Description, Image, type(Day/Night)}
+
+-------------------------------------------------------------------------------------------------------------------------
+API endpoints:
+
+1. Users:
+
+POST /api/users/signup: Create a new user  √√√
+POST /api/users/login: Log user in (Redux) √√√
+
+2. Plant:
+Upload image: √√√
+
+GET /api/plant/all : Retrieve list of all plants  √√√
+GET /api/plant/:id : Retrieve a specific plant by plant id √√√
+GET /api/plant/:type : Retrieve a specific plant by plant type √√√
+
+POST /api/plant/add : Create a new plant  √√√
+PUT /api/plant/update/:id : Update a place by its pid  √√√
+DELETE /api/plant/:id : Delete a place by its pid √√√
+
+-------------------------------------------------------------------------------------------------------------------------
+SPA Pages Route:
+1.  / : List of users     			----Always reachable
+2. /:uid/places : List of places of a selected user     ----Always reachable
+3. /authenticate : Sign up + Login forms		----Only unauthenticate
+4. /places/new : Create new place form		----Only authenticate
+5. /places/:pid : Update place form		----Only authenticate
+
+-------------------------------------------------------------------------------------------------------------------------
+Image uploading thoughts:
+1. The Upload component form is sending an array with images objects, so the model in Mongodb has a Arrays type property 'image'. The array 
+would only have one image object due to the need.
+-------------------------------------------------------------------------------------------------------------------------
+Others:
+1. Authentication route: Every page is avaiable until an user sign in. √√√
+2. Display the logged in user's infotmation (by Redux) √√√

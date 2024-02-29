@@ -1,0 +1,13 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5PrEtpslHBTQrK5psdBDh3FS0UiOrV2OUsA&usqp=CAU');
+    background-size: cover;
+}
+
+.login-form {
+    width: 20%;
+}
