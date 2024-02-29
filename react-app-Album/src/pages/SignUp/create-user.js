@@ -71,14 +71,7 @@ const CreateUser = () => {
     return (
         <>
             <div className='create-user-container'>
-            <h1>This is the page of the create a user using form</h1>
-                {/* Image */}
-                {/* <img
-                    className="form-image"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgrHiubGtwlX7QnvPAqp0qgvNvNubWuRL3yQ&usqp=CAU"
-                    alt="123"
-
-                /> */}
+            <h1>This is the page to create a user using form</h1>
 
                 {/* Form */}
                 <Form
