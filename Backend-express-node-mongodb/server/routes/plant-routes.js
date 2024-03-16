@@ -15,7 +15,7 @@ import updatePlant from './plant-routes/update-plant.js';
 
 const router = Router();
 
-// Use the routes: CRUD and upload image
+// Use the routes: upload and imageCRUD
 router.use(uploadImage);
 router.use(addPlant);
 router.use(getPlant);

@@ -46,7 +46,7 @@ const MainLayout = () => {
         token: { colorBgContainer, borderRadiusLG },
     } = theme.useToken();
 
-    // Get the current location
+    // Get the current location like /home, /user, /plant, /upload
     // When the page is loaded, the menu item of the current page is highlighted
     const location = useLocation()
     // Get the key of the current location

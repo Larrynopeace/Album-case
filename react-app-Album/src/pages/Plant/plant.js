@@ -100,6 +100,7 @@ const Plant = () => {
                 {/* Rendering items */}
                 {plant.map((item) => (
                     <Card
+                        className='custom-card'
                         hoverable
                         style={{ width: 180 }}
                         // Retreive each plant's image object in the array (Although there is only one image for each plant, it is still stored in an array. This is for the convenience of future expansion.)
@@ -107,7 +108,7 @@ const Plant = () => {
                             <img
                                 key={img._id}
                                 alt={item.title}
-                                src={'http://localhost:3000/' + img.url}
+                                src={img.url}
                             />))}
                         key={item._id}
                         // Click the card to navigate to the edit page

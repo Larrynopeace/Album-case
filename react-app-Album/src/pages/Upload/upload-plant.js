@@ -68,13 +68,14 @@ const UploadPlant = () => {
             .then((response) => {
                 console.log("@@@Selected item:", response.data);
 
-                // Set the form values
+                // Set(return) the form values
                 form.setFieldsValue({
                     title: response.data.title,
                     description: response.data.description,
                     type: response.data.type,
                     // set the upload field to an array containing the image object
-                    upload: response.data.image.map((img) => ({ url: `http://localhost:3000/${img.url}` })),
+                    //upload: response.data.image.map((img) => ({ url: `http://localhost:3000/${img.url}` })),
+                    upload: response.data.image.map((img) => ({ url: img.url })),
                 })
             })
             .catch((error) => {
@@ -207,7 +208,7 @@ const UploadPlant = () => {
                     <Upload
                         name='image'
                         listType="picture-card"
-                        // action is the api address
+                        // action is the api address that upload sends the image to
                         action={'http://localhost:3000/upload'}
                         // onChange is the function that is called when the image is uploading
                         onChange={onSeeUploadedImage}

@@ -21,11 +21,11 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 // Import mongodb-setting.js
 import db from './server/mongodb-setting/mongodb-setting.js';
-
-// Import plant-routes.js
+// import routes
 import plantRoutes from './server/routes/plant-routes.js';
-// Import user-routes.js
 import userRoutes from './server/routes/user-routes.js';
+import sendEmail from './server/routes/send-emails.js';
+
 
 // Connect to mongoDB
 db(() => {
@@ -33,6 +33,7 @@ db(() => {
     // Use plantRoutes and userRoutes
     app.use(plantRoutes);
     app.use(userRoutes);
+    app.use(sendEmail);
 
     //To serve these local images, you can use the express.static middleware in your Express.js server: localhost:3000/uploads/1619787530000-plant1.jpg
     app.use('/uploads', express.static('uploads'));

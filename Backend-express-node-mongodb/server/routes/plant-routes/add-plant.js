@@ -10,7 +10,7 @@ router.post('/plant/add', (req, res) => {
     // See the uploaded image details when submitting the form
     console.log("@@@Image in request:", req.body.image);
 
-    const images = req.body.image.map(img => ({ url: `uploads/${img.response.filename}` }));
+    const images = req.body.image.map(img => ({ url: `http://localhost:3000/uploads/${img.response.filename}` }));
 
     const newPlant = new PlantModel({
         title: req.body.title,
